@@ -9,7 +9,7 @@ router.post('/', async (request, response) => {
     if (
       !request.body.title ||
       !request.body.author ||
-      !request.body.publishYear||
+      //!request.body.publishYear||
       !request.body.isbn||
       !request.body.pageCount||
       !request.body.thumbnailUrl||
@@ -23,7 +23,7 @@ router.post('/', async (request, response) => {
     const newBook = {
       title: request.body.title,
       author: request.body.author,
-      publishYear: request.body.publishYear,
+      //publishYear: request.body.publishYear,
       isbn: request.body.isbn,
       pageCount: request.body.pageCount,
       thumbnailUrl: request.body.thumbnailUrl,
@@ -75,7 +75,7 @@ router.put('/:id', async (request, response) => {
     if (
       !request.body.title ||
       !request.body.author ||
-      !request.body.publishYear||
+      //!request.body.publishYear||
       !request.body.isbn||
       !request.body.pageCount||
       !request.body.thumbnailUrl||

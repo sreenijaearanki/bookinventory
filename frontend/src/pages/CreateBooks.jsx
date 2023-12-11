@@ -8,7 +8,7 @@ import { useSnackbar } from 'notistack';
 const CreateBooks = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [publishYear, setPublishYear] = useState('');
+  //const [publishYear, setPublishYear] = useState('');
   const [isbn, setIsbn] = useState('');
   const [pageCount, setPageCount] = useState('');
   const [thumbnailUrl, setThumbnailUrl] = useState('');
@@ -22,7 +22,7 @@ const CreateBooks = () => {
     const data = {
       title,
       author,
-      publishYear,
+     // publishYear,
       isbn,
       pageCount,
       thumbnailUrl,
@@ -68,6 +68,8 @@ const CreateBooks = () => {
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
         </div>
+        
+        {/*
         <div className='my-4'>
           <label className='text-xl mr-4 text-gray-500'>Publish Year</label>
           <input
@@ -77,7 +79,7 @@ const CreateBooks = () => {
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
         </div>
-
+  */}
 
         <div className='my-4'>
           <label className='text-xl mr-4 text-gray-500'>ISBN</label>
