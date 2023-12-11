@@ -31,7 +31,7 @@ const CreateBooks = () => {
     };
     setLoading(true);
     axios
-      .post('https://bookinventory-frontend.vercel.app/books', data)
+      .post('https://bookinventory.vercel.app/books', data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Created successfully', { variant: 'success' });
