@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm run dev1\" \"npm run client\""
   },
   "keywords": [],
-  "author": "MamadTaheri68",
+  "author": "sreenijaearanki",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^8.2.2",
