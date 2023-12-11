@@ -7,7 +7,7 @@ import { useSnackbar } from 'notistack';
 
 const EditBook = () => {
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [authors, setAuthor] = useState('');
   const [isbn, setIsbn] = useState('');
   const [pageCount, setPageCount] = useState('');
   const [publishYear, setPublishYear] = useState('0000');
@@ -42,7 +42,7 @@ const EditBook = () => {
   const handleEditBook = () => {
     const data = {
       title,
-      author,
+      authors,
       publishYear,
       isbn,
       pageCount,
@@ -84,7 +84,7 @@ const EditBook = () => {
           <label className='text-xl mr-4 text-gray-500'>Author</label>
           <input
             type='text'
-            value={author}
+            value={authors}
             onChange={(e) => setAuthor(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
