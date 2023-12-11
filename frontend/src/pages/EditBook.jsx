@@ -7,10 +7,10 @@ import { useSnackbar } from 'notistack';
 
 const EditBook = () => {
   const [title, setTitle] = useState('');
-  const [authors, setAuthor] = useState('');
+  const [author, setAuthor] = useState('');
   const [isbn, setIsbn] = useState('');
   const [pageCount, setPageCount] = useState('');
-  const [publishYear, setPublishYear] = useState('0000');
+ // const [publishYear, setPublishYear] = useState('0000');
   const [thumbnailUrl, setThumbnailUrl] = useState('');
   const [shortDescription, setShortDescription] = useState('');
   const [categories, setCategories] = useState('');
@@ -24,7 +24,7 @@ const EditBook = () => {
     axios.get(`https://bookinventory.vercel.app/books/${id}`)
     .then((response) => {
         setAuthor(response.data.authors);
-        setPublishYear('0000')
+      //  setPublishYear('0000')
         setTitle(response.data.title)
         setPageCount(response.data.pageCount)
         setShortDescription(response.data.shortDescription)
@@ -42,8 +42,8 @@ const EditBook = () => {
   const handleEditBook = () => {
     const data = {
       title,
-      authors,
-      publishYear,
+      author,
+      //publishYear,
       isbn,
       pageCount,
       thumbnailUrl,
@@ -84,7 +84,7 @@ const EditBook = () => {
           <label className='text-xl mr-4 text-gray-500'>Author</label>
           <input
             type='text'
-            value={authors}
+            value={author}
             onChange={(e) => setAuthor(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
